@@ -14,7 +14,7 @@ You may note these requirements in designing a C++ header for Jupyter.
 
 * No `stdin`. It includes these commands that are banned and cannot be executed generally once the external header is used:
 
-```cpp
+```C++
 std::cin >> some_variables_1;
 cin >> some_variables_2;
 std::getline(std::cin, some_string_1);
@@ -33,7 +33,7 @@ The version of headers must match the installed C++ kernel.
 
 In the file `setup.cfg`, you can edit the version in the line 4:
 
-```cfg
+```python
 4 version = 1.0.0a5
 ```
 
