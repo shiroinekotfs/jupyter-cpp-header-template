@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#ifndef cppjupytertestheader_legacy
-#define cppjupytertestheader_legacy
+#ifndef _CPP_KERNEL_HEADER_TEST_legacy
+#define _CPP_KERNEL_HEADER_TEST_legacy
 
 #endif

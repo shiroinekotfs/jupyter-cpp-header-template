@@ -1,5 +1,5 @@
-#ifndef cppjupytertestheader
-#define cppjupytertestheader
+#ifndef _CPP_KERNEL_HEADER_TEST
+#define _CPP_KERNEL_HEADER_TEST
 
 #include <iostream>
 
@@ -9,17 +9,17 @@ extern "C" {
     #include "res/legacy.h"
 }
 
-namespace cppjupytertestheader {
+namespace _CPP_KERNEL_HEADER_TEST {
     void TestHeaderMode() {
         std::cout << "External headers are working properly." << std::endl;
 
-        #ifdef cppjupytertestheader_legacy
+        #ifdef _CPP_KERNEL_HEADER_TEST_legacy
             printf("C Header Legacy is working as expected.");
         #else
             printf("C Header Legacy is NOT working as expected.");
         #endif
     
-        #ifdef cppjupytertestheader_linker
+        #ifdef _CPP_KERNEL_HEADER_TEST_linker
             std::cout << "C++ Linker is working as expected." << std::endl;
         #else
             std::cout << "C Linker is NOT working as expected." << std::endl;
