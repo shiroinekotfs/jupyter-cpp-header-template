@@ -10,7 +10,7 @@ You can fork, import, or clone this template freely.
 
 You may note these requirements in designing a C++ header for Jupyter.
 
-* No `using namespace std;`. It may raise additional errors, including conflict with other headers, resulting in undefined states of the whole kernel. It is also causing some **security** issues on the Enterprise deployment, such as on [Research Labs](https://github.com/TheFlightSims/research-labs)
+* **DO NOT USE** `using namespace std;` in the HEADER. It may raise additional errors, including conflict with other headers, resulting in undefined states of the whole kernel. It is also causing some **security** issues on the Enterprise deployment, such as [Research Labs](https://github.com/TheFlightSims/research-labs)
 
 * No `stdin`. It includes these commands that are banned and cannot be executed generally once the external header is used:
 
@@ -25,7 +25,7 @@ It is because the C++ kernel uses pre-processing to add the I/O for user interac
 
 * Using namespace for your header. We do recommend not requiring it. However, if you want a user to use the code globally, save the code as you usually do.
 
-* Include guard is **RECOMMENDED** to prevent any conflict while importing, declaring and using function in C++ headers. To know what the guard is, check out this [WikiPedia page](https://en.wikipedia.org/wiki/Include_guard)
+* Include guard is **RECOMMENDED** to prevent any conflict while importing, declaring and using functions in C++ headers. To know what the guard is, check out this [Wikipedia page](https://en.wikipedia.org/wiki/Include_guard)
 
 ### Versioning headers
 
@@ -45,9 +45,9 @@ Also, you can manipulate `setup.py` at the line 5:
 
 ### Include header files into
 
-The C++ kernel can only interpret headers under the `{environment_path}/share/cpp_header`, but not in the sub-folders. If you want to include headers that are also in the subfolder (for example, in this repo, in the `sample/res` folder), your master header (in this example is the `sample.hpp`) must include these headers with your property path.
+The C++ kernel can only interpret headers under the `{environment_path}/share/cpp_header`, but not in the sub-folders. If you want to include headers that are also in the subfolder (for example, in this repo, in the `sample/res` folder), your master header (in this example the `sample.hpp`) must include these headers with your property path.
 
-Once it's completed, adding all your headers in `setup.py` at line 22:
+Once it's completed, add all your headers in `setup.py` at line 22:
 
 ```python
 22       data_files = [
