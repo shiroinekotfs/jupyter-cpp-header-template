@@ -21,6 +21,6 @@ setup(
       install_requires = ['jupyter-cpp-kernel>=1.0.0a5'],
       data_files = [
           ("share/cpp_header", ['sample/sample.hpp']),
-          ("share/cpp_header/res", ['sample/res/legacy.c', 'sample/res/linker.hpp'])
+          ("share/cpp_header/res", ['sample/res/legacy.h', 'sample/res/linker.hpp'])
       ]
 )
